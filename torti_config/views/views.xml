@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="torti_config.list">
+      <field name="name">torti_config list</field>
+      <field name="model">torti_config.torti_config</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="torti_config.action_window">
+      <field name="name">torti_config window</field>
+      <field name="res_model">torti_config.torti_config</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="torti_config.action_server">
+      <field name="name">torti_config server</field>
+      <field name="model_id" ref="model_torti_config_torti_config"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="torti_config" id="torti_config.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="torti_config.menu_1" parent="torti_config.menu_root"/>
+    <menuitem name="Menu 2" id="torti_config.menu_2" parent="torti_config.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="torti_config.menu_1_list" parent="torti_config.menu_1"
+              action="torti_config.action_window"/>
+    <menuitem name="Server to list" id="torti_config" parent="torti_config.menu_2"
+              action="torti_config.action_server"/>
+-->
+  </data>
+</odoo>
