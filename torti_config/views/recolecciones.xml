@@ -1,0 +1,87 @@
+<odoo>
+    <data>        
+        <record id="tree_pos_recolecciones_for_ctt" model="ir.ui.view">
+                    <field name="name">Recolecciones</field>
+                    <field name="model">torti_config.recolecciones</field>
+                    <field name="priority">1001</field>
+                    <field name="arch" type="xml">
+                        <tree>
+                            <field name="fecha_retiro"/>
+                            <field name="sucursal"/>
+                            <field name="monto"/>
+                            <field name="motivo"/>
+<!--                             <field name="cajero" /> -->
+                            <field name="status"/>
+<!--                             <button name="button_pos_order_id" string="Point of Sale Order" type="object" icon="fa-book"/> -->
+                        </tree>
+                    </field>
+                </record>
+
+                <record model="ir.actions.act_window" id="action_pos_recolecciones_for_ctt">
+                    <field name="name">Detalle de Recolecciones</field>
+                    <field name="res_model">torti_config.recolecciones</field>
+                    <field name="view_mode">tree</field>
+                    <field name="view_id" ref="torti_config.tree_pos_recolecciones_for_ctt"/>
+                    <field name="context">{'create':False,'edit':False,'delete':False}</field>
+
+                </record>
+
+
+                <menuitem id="menu_pos_recolecciones_for_ctt" 
+                          name="Recolecciones" 
+                          action="action_pos_recolecciones_for_ctt"
+                          parent="point_of_sale.menu_point_of_sale" 
+                          sequence="150" />
+        
+                
+            <record id="ctt_pos_recolecciones_view_search" model="ir.ui.view">
+            <field name="name">Buscar_recolecciones</field>
+            <field name="model">torti_config.recolecciones</field>
+            <field name="arch" type="xml">
+               <search string="Buscar">
+                    <field name="sucursal" string="Sucursal"/>
+<!--                         <group expand="0" string="Group By">                                            
+                            <filter string="Session" name="session_id" context="{'group_by': 'order_session_id'}"></filter>                                            
+                            <filter string="Point of Sale" name="config_id" context="{'group_by': 'order_config_id'}"></filter>                                           
+                            <filter string="Customer" name="partner_id" context="{'group_by': 'partner_id'}"></filter>                                            
+                            <filter string="User" name="user_id" context="{'group_by': 'order_user_id'}"></filter>                                           
+                        </group>        -->
+
+                </search>
+            </field>
+        </record>
+        
+<!--          <record id="pos_order_line_tree_view_inherit" model="ir.ui.view">
+            <field name="name">pos_order_line_tree_view</field>
+            <field name="model">pos.order.line</field>
+            <field name="inherit_id" ref="country_config.pos_order_line_view_search"/>
+            <field name="arch" type="xml">
+                  <search string="Search orders">                                         
+                      <group expand="0" string="Group By">                                            
+                        <filter string="Session" name="session_id" context="{'group_by': 'order_session_id'}"></filter>                                            
+                        <filter string="Point of Sale" name="config_id" context="{'group_by': 'order_config_id'}"></filter>                                           
+                        <filter string="Customer" name="partner_id" context="{'group_by': 'partner_id'}"></filter>                                            
+                        <filter string="User" name="user_id" context="{'group_by': 'order_user_id'}"></filter>                                           
+                      </group>                                    
+                    </search>                     
+            </field>
+        </record> -->
+        
+<!--                 <record id="ctt_search_pos_order_line" model="ir.ui.view">                                
+                <field name="name">pos.order.search</field>                                
+                <field name="model">pos.order.line</field>
+                <field name="view_id" ref="ctt_pos.tree_pos_order_line_for_ctt"/>
+                <field name="arch" type="xml">                                    
+                    <search string="Search orders">                                         
+                      <group expand="0" string="Group By">                                            
+                        <filter string="Session" name="session_id" context="{'group_by': 'order_session_id'}"></filter>                                            
+                        <filter string="Point of Sale" name="config_id" context="{'group_by': 'order_config_id'}"></filter>                                           
+                        <filter string="Customer" name="partner_id" context="{'group_by': 'partner_id'}"></filter>                                            
+                        <filter string="User" name="user_id" context="{'group_by': 'order_user_id'}"></filter>                                           
+                      </group>                                    
+                    </search>                                
+                  </field>                            
+                </record>
+         -->
+        </data>
+</odoo>

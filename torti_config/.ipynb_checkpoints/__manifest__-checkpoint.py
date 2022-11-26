@@ -24,20 +24,22 @@
 
     # always loaded
     'data': [
-        # 'security/ir.model.access.csv',
+        'security/ir.model.access.csv',
         'views/views.xml',
         'views/templates.xml',
+        'views/recolecciones.xml',
     ],
     # only loaded in demonstration mode
     'demo': [
         'demo/demo.xml',
     ],
     'assets': {
-#         'point_of_sale.pos_assets_backend': [
-#             'country_config/static/src/js/*.js',
-#         ],
+        # 'web.assets_backend': [
+        #    'torti_config/static/src/js/**/*.js',
+        # ],
         'web.assets_qweb': [
-            'torti_config/static/src/xml/*',
+          'torti_config/static/src/xml/*.xml',
         ],
     },
+   
 }
