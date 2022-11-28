@@ -18,9 +18,16 @@
     # for the full list
     'category': 'Uncategorized',
     'version': '0.1',
+    'license': 'OPL-1',
+    'license': 'LGPL-3',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base',
+               'stock',
+               'hr',
+               'sale_management',
+               'contacts',
+               ],
 
     # always loaded
     'data': [
