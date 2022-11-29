@@ -1,2 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_ctt_domicilio_ctt_domicilio,ctt_domicilio.ctt_domicilio,model_ctt_domicilio_ctt_domicilio,base.group_user,1,1,1,1
