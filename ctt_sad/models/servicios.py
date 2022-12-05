@@ -8,7 +8,7 @@ from odoo.exceptions import ValidationError
 _logger = logging.getLogger(__name__)
 
 class ServDomicilio(models.Model):
-    _name = "ctt_domicilio.registro"
+    _name = "ctt_sad.registro"
     _description = "Registro"
     _order = "id desc"
     
