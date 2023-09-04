@@ -1,0 +1,20 @@
+<odoo>
+    <data>
+        <record id="view_product_template_pos_form" model="ir.ui.view">
+            <field name="name">sales.inherit</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                 <xpath expr="//page[@name='other_information']" position="after">
+                     <page string="Información envio">
+                         <group>
+                             <field name="is_fragil"/>
+                             <field name="contenido_paquete"/>
+                         </group>
+                     </page>
+                     
+                 </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

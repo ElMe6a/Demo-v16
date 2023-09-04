@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+<!--
+    <record model="ir.ui.view" id="paqueteria_cntrl.list">
+      <field name="name">paqueteria_cntrl list</field>
+      <field name="model">paqueteria_cntrl.paqueteria_cntrl</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+-->
+
+    <!-- actions opening views on models -->
+<!--
+    <record model="ir.actions.act_window" id="paqueteria_cntrl.action_window">
+      <field name="name">paqueteria_cntrl window</field>
+      <field name="res_model">paqueteria_cntrl.paqueteria_cntrl</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+-->
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="paqueteria_cntrl.action_server">
+      <field name="name">paqueteria_cntrl server</field>
+      <field name="model_id" ref="model_paqueteria_cntrl_paqueteria_cntrl"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+
+    <!-- Top menu item -->
+<!--
+    <menuitem name="paqueteria_cntrl" id="paqueteria_cntrl.menu_root"/>
+-->
+    <!-- menu categories -->
+<!--
+    <menuitem name="Menu 1" id="paqueteria_cntrl.menu_1" parent="paqueteria_cntrl.menu_root"/>
+    <menuitem name="Menu 2" id="paqueteria_cntrl.menu_2" parent="paqueteria_cntrl.menu_root"/>
+-->
+    <!-- actions -->
+<!--
+    <menuitem name="List" id="paqueteria_cntrl.menu_1_list" parent="paqueteria_cntrl.menu_1"
+              action="paqueteria_cntrl.action_window"/>
+    <menuitem name="Server to list" id="paqueteria_cntrl" parent="paqueteria_cntrl.menu_2"
+              action="paqueteria_cntrl.action_server"/>
+-->
+  </data>
+</odoo>
